@@ -1,12 +1,25 @@
 {
   "name": "test-server",
   "version": "1.0.0",
-  "description": "Simple Node.js Server",
+  "description": "",
   "main": "index.js",
   "scripts": {
-  	"start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dan Sapp",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twotonedan/test-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twotonedan/test-server/issues"
+  },
+  "homepage": "https://github.com/twotonedan/test-server#readme",
+  "dependencies": {
+    "docker": "^1.0.0",
+    "ronin-mocks": "^0.1.11",
+    "ronin-server": "^0.1.3"
+  }
 }
