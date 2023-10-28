@@ -1,7 +1,14 @@
-const ronin = require('ronin-server')
-const mocks = require('ronin-mocks')
+var http = require('http');
 
-const server = ronin.server()
+var server = http.createServer(function (req, res) {
 
-server.use('/', mocks.server(server.Router(), false, true))
-server.start()
+  if (req.url == '/data') { //check the URL of the current request
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.write(JSON.stringify({ message: "Hello World" }));
+    res.end();
+  }
+});
+
+server.listen(5000);
+
+console.log('Node.js web server at port 5000 is running..')
